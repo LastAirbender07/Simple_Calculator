@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator | Compound Intrest Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        h1{
+          color: #000;
+          font-size: 25px;
+          font-family: 'Montserrat', sans-serif;
+          }
+        p{
+          color: #000;
+          font-size: 20px;
+          font-family: 'Barlow', sans-serif;
+         }
+         a{
+          color: rgb(5, 13, 158);
+          font-size: 20px;
+          font-family: 'Barlow', sans-serif;
+          text-decoration: none;
+         }
+         a:hover{
+          color:aqua;
+         }
+    </style>
+</head>
+<body>
+    <br>
+    <button><a href="https://www.google.com" style="text-decoration: none; font-size: 20px; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Main Page</a></button>
+    <div class="container">
+    <h1 align="center">COMPOUND INTEREST CALCULATOR</h1>
+    <ul>
+        <li> <a href="calculator.html">Home</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Calculator">Calculators</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Member</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+    </ul>
+    <hr>
+    <div class="cal">
+    <form name="case">
+        <input name="display" id="display" value="">
+        <table>
+            <tr>
+                <td><input type="button" class="digit" value="1" onclick="run1()"></td>
+                <td><input type="button" class="digit" value="2" onclick="run2()"></td>
+                <td><input type="button" class="digit" value="3" onclick="run3()"></td>
+                <td><input type="button" id="plus" 	class="oper" 	value="+"  onclick="runPlus()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="digit" value="4" onclick="run4()"></td>
+                <td><input type="button" class="digit" value="5" onclick="run5()"></td>
+                <td><input type="button" class="digit" value="6" onclick="run6()"></td>
+                <td><input type="button" id="minus" 	class="oper" 	value="-" onclick="runMinus()" ></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="digit" value="7" onclick="run7()"></td>
+                <td><input type="button" class="digit" value="8" onclick="run8()"></td>
+                <td><input type="button" class="digit" value="9" onclick="run9()"></td>
+                <td><input type="button" id="divide" 	class="oper" 	value="/" onclick="runDivide()" ></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="digit" value="0" onclick="run0()"></td>
+                <td><input type="button" id="clearMem" class="oper" value="C" onclick="runC()"></td>
+                <td><input type="button" id="equal" class="oper" value="=" onclick="runEquals()"></td>
+                <td><input type="button" id="multiply" class="oper" value="*" onclick="runMultiply()"></td>
+            </tr>
+        </table>
+    </form>
+    <div class="text">
+        <h1>Calculator</h1>
+        <p>This is a normal calculator to calulate simple Arithmetic Calculations<br>I have used Java Script to read the values you click and the result is 
+            displayed once you click the "=" symbol</p>
+    </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h1>Calculate Compound Intrest Down Here </h1><br>
+    <p>Enter Principal Amount : <input type="text" id="p" value=""></p><br>
+    <p>Enter Rate of Interest (%): <input type="text" id="r"  value=""></p><br>
+    <p>Enter Time Period (in years) : <input type="text" id="t"  value=""></p><br>
+    <p>Enter no. of times interest is compounded per year : <input type="text" id="n" value=""></p><br>
+    <input type="button" class = "calsy" onclick="compound()" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" class = "clr" onclick="clear()" value="Clear"><br><br>
+    <p>Compound Interst : <input id="ans1"></p><br>
+    <p>Total Amount : <input id="ans2"></p>
+    </div>
+</body>
